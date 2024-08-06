@@ -1,0 +1,19 @@
+version: "2.0"
+services:
+    mysql:
+        restart: on-failure
+        image: "mysql:8.0"
+        environment:
+            MYSQL_DATABASE: db
+            MYSQL_USER: mysqluser
+            MYSQL_PASSWORD: ZjP68Ygd
+            MYSQL_ROOT_PASSWORD: ZjP68Ygd
+        ports:
+            - "3306:3306"
+        expose:
+            - "3306"
+        volumes:
+            - "hw-db:/var/lib/mysql"
+
+volumes:
+    hw-db: null
